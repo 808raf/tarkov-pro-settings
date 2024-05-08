@@ -6,8 +6,8 @@ import logo from "@/public/logo.png";
 
 const Navbar = () => {
   return (
-    <ul className="flex justify-between border-b-2 h-14 items-center pl-6 pr-6 font-semibold font">
-      <div className="flex gap-3 shrink-0">
+    <ul className="flex justify-between border-b-2 h-14 items-center pl-6 pr-6 font-semibold text-sm">
+      <div className="flex gap-3 shrink-0 items-center">
         <li className="hidden sm:block">
           <Link className="hover:bg-transparent" href={"/"}>
             <Image src={logo} alt="logo" height={24} />
