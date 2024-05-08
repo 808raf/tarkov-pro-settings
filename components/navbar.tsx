@@ -6,23 +6,31 @@ import logo from "@/public/logo.png";
 
 const Navbar = () => {
   return (
-    <ul className="flex justify-between border-b-2 h-14 items-center pl-6 pr-6 font-semibold">
-      <div className="flex gap-6">
+    <ul className="flex justify-between border-b-2 h-14 items-center pl-6 pr-6 font-semibold font">
+      <div className="flex gap-3">
         <li>
-          <Link href={"/"}>
+          <Link className="hover:bg-transparent" href={"/"}>
             <Image src={logo} alt="logo" height={24} />
           </Link>
         </li>
 
-        <div className="flex gap-6 pl-6">
-          <li>Players</li>
-          <li>Blog</li>
+        <div className="flex ">
+          <li>
+            <Link href={"/players"}>Players</Link>
+          </li>
+          <li>
+            <Link href={"/blog"}>Blog</Link>
+          </li>
         </div>
       </div>
 
-      <div className="flex gap-6">
-        <li>Log In</li>
-        <li>Sign Up</li>
+      <div className="flex">
+        <li>
+          <Link href={"/login"}>Log In</Link>
+        </li>
+        <li>
+          <Link href={"/signup"}>Sign Up</Link>
+        </li>
       </div>
     </ul>
   );
