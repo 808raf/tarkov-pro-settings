@@ -1,5 +1,5 @@
 import Navbar from "@/components/navbar";
-import Players from "@/components/players";
+import Players from "@/components/card-grid";
 
 const Page = () => {
   return (

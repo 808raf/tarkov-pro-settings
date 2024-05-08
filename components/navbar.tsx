@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/logo.png";
+import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   return (
@@ -26,10 +27,21 @@ const Navbar = () => {
 
       <div className="flex">
         <li>
-          <Link href={"/login"}>Log In</Link>
+          <Link href={"/login"} className="hover:bg-transparent">
+            <Button
+              className="hover:bg-sky-500 hover:text-white"
+              variant={"outline"}
+            >
+              Log In
+            </Button>
+          </Link>
         </li>
         <li>
-          <Link href={"/signup"}>Sign Up</Link>
+          <Link href={"/signup"} className="hover:bg-transparent">
+            <Button className="bg-sky-700 hover:bg-sky-500 shadow-md">
+              Sign Up
+            </Button>
+          </Link>
         </li>
       </div>
     </ul>

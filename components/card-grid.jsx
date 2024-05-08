@@ -1,4 +1,4 @@
-const Players = () => {
+const CardGrid = () => {
   return (
     <section className="container mt-10 max-w-7xl">
       <h1 className="text-4xl font-bold mb-14">Players</h1>
@@ -9,4 +9,4 @@ const Players = () => {
     </section>
   );
 };
-export default Players;
+export default CardGrid;
