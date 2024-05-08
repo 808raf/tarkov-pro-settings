@@ -9,7 +9,7 @@ import {
 
 const PlayerCard = () => {
   return (
-    <Card className="flex flex-col items-center h-64 w-60 justify-around mx-auto hover:cursor-pointer hover:bg-card-back">
+    <Card className="flex flex-col items-center h-64 w-11/12 justify-around mx-auto hover:cursor-pointer hover:bg-card-back">
       <CardHeader>
         <CardTitle>Player x</CardTitle>
         <CardDescription>Card Description</CardDescription>
