@@ -1,11 +1,11 @@
 import Navbar from "@/components/navbar";
-import Players from "@/components/card-grid";
+import CardGrid from "@/components/card-grid";
 
 const Page = () => {
   return (
     <main>
       <Navbar />
-      <Players />
+      <CardGrid />
     </main>
   );
 };
