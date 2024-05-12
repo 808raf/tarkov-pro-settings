@@ -1,22 +1,10 @@
-import {
-  Command,
-  CommandDialog,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-  CommandShortcut,
-} from "@/components/ui/command";
+import { Command, CommandInput, CommandList } from "@/components/ui/command";
 
 const PlayerSearch = () => {
   return (
-    <Command className="mb-7 shadow-md ">
+    <Command className="mb-7 shadow-sm max-w-72">
       <CommandInput placeholder="Search players..." />
-      <CommandList>
-        <CommandSeparator />
-      </CommandList>
+      <CommandList></CommandList>
     </Command>
   );
 };
