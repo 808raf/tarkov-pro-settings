@@ -7,11 +7,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import PlayerAvatar from "./player-avatar";
-import { Twitch } from "lucide-react";
 
 const PlayerCard = () => {
   return (
-    <Card className="flex flex-col h-64 w-full justify-center items-center hover:cursor-pointer hover:bg-card-back">
+    <Card className="flex flex-col shadow-lg h-64 w-full justify-center items-center hover:cursor-pointer hover:bg-card-back hover:text-sky-500">
       <CardHeader>
         <PlayerAvatar />
         <CardTitle className="self-center">Tigz</CardTitle>

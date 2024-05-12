@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   return (
-    <ul className="flex justify-between border-b-2 h-14 items-center pl-6 pr-6 font-bold text-sm">
+    <ul className="flex justify-between shadow-sm h-14 items-center pl-6 pr-6 font-bold text-sm bg-white">
       <div className="flex shrink-0 items-center">
         <li className="hidden sm:block">
           <Link className="hover:bg-transparent" href={"/"}>
