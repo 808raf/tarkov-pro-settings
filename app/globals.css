@@ -72,6 +72,6 @@
   }
   body {
     @apply text-foreground;
-    background-color: #fafafa;
+    background-color: #f5f5f5;
   }
 }
