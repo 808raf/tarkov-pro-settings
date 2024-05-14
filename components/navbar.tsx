@@ -12,7 +12,10 @@ const Navbar = () => {
       <div className="flex shrink-0 items-center">
         <li className="hidden sm:block">
           <Link className="hover:bg-transparent" href={"/"}>
-            <Image src={logo} alt="logo" height={24} />
+            {/* <Image src={logo} alt="logo" height={24} /> */}
+            <span className="text-2xl p-1 bg-gradient-to-t from-sky-900 to-sky-600 bg-clip-text text-transparent">
+              TarkovProSettings
+            </span>
           </Link>
         </li>
 
@@ -43,7 +46,7 @@ const Navbar = () => {
             className="hover:bg-transparent hover:text-black p-0"
           >
             <Button
-              className="hover:bg-sky-500 hover:text-white"
+              className="hover:bg-sky-500 hover:text-white font-bold text-xs"
               variant={"outline"}
             >
               Log In
@@ -52,7 +55,11 @@ const Navbar = () => {
         </li>
         <li>
           <Link href={"/signup"} className="hover:bg-transparent p-0">
-            <Button className="bg-sky-700 hover:bg-sky-500 shadow-md">
+            <Button
+              variant={"outline"}
+              className="hover:bg-sky-500 hover:text-white font-bold text-xs"
+              // className="bg-sky-700 hover:bg-sky-500 dark:hover:bg-sky-500 shadow-md dark:text-white dark:bg-slate-900"
+            >
               Sign Up
             </Button>
           </Link>

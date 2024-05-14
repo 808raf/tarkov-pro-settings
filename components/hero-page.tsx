@@ -22,7 +22,7 @@ const HeroPage = () => {
               <div className="max-w-2xl text-center mx-auto">
                 {/* Title */}
                 <div className="mt-5 max-w-2xl">
-                  <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+                  <h1 className="p-1 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl bg-gradient-to-l from-sky-900 to-sky-500 bg-clip-text text-transparent">
                     Elevate your gameplay
                   </h1>
                 </div>
