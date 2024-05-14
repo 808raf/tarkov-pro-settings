@@ -4,10 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/logo.png";
 import { Button } from "@/components/ui/button";
+import { DarkToggle } from "./dark-toggle";
 
 const Navbar = () => {
   return (
-    <ul className="flex justify-between shadow-sm h-14 items-center pl-6 pr-6 font-bold text-sm bg-white">
+    <ul className="flex justify-between shadow-sm h-14 items-center pl-6 pr-6 font-bold text-sm bg-white dark:bg-slate-950">
       <div className="flex shrink-0 items-center">
         <li className="hidden sm:block">
           <Link className="hover:bg-transparent" href={"/"}>
@@ -56,6 +57,7 @@ const Navbar = () => {
             </Button>
           </Link>
         </li>
+        <DarkToggle />
       </div>
     </ul>
   );

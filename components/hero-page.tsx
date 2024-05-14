@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 const HeroPage = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
+    <div className="flex flex-col h-screen md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
       <div className="md:w-1/2">
-        <div className="min-w-[300px]">
+        <div className="min-w-[300px] flex">
           <Image
             className="hidden sm:block pl-7 pt-7 sm:pl-0 sm:pt-0"
             src={hero}
@@ -20,7 +20,6 @@ const HeroPage = () => {
           <div className="relative z-10">
             <div className="container py-10 lg:py-16">
               <div className="max-w-2xl text-center mx-auto">
-                {/* <p className="">TarkovProSettings</p> */}
                 {/* Title */}
                 <div className="mt-5 max-w-2xl">
                   <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
@@ -36,9 +35,9 @@ const HeroPage = () => {
                 </div>
                 {/* Buttons */}
                 <div className="mt-8 gap-3 flex justify-center">
-                  <Button size={"lg"}>Get started</Button>
+                  <Button size={"lg"}>Find Player</Button>
                   <Button size={"lg"} variant={"outline"}>
-                    Learn more
+                    View Blog
                   </Button>
                 </div>
                 {/* End Buttons */}
