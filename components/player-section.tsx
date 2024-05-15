@@ -14,7 +14,7 @@ import PlayerAvatar from "./player-avatar";
 const PlayerSection = () => {
   return (
     <section className="container mt-10 max-w-7xl mb-14">
-      <Card className="hover:dark:bg-slate-950 min-w-[300px] min-h-96 shadow-lg hover:bg-card-back flex flex-col sm:flex-row items-center justify-center">
+      <Card className="hover:dark:bg-slate-950 min-w-[300px] min-h-96 shadow-lg flex flex-col sm:flex-row items-center justify-center">
         <CardHeader>
           <PlayerAvatar />
           <CardTitle className="self-center">Tigz</CardTitle>
@@ -23,7 +23,7 @@ const PlayerSection = () => {
           </CardDescription>
         </CardHeader>
 
-        <CardFooter className="flex flex-col">
+        <CardFooter className="flex flex-col p-6">
           <ul className="flex gap-3 self-start">
             <li>
               <Link href={"/"}>

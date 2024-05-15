@@ -1,8 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import logo from "@/public/logo.png";
 import { Button } from "@/components/ui/button";
 import { DarkToggle } from "./dark-toggle";
 
@@ -12,7 +10,6 @@ const Navbar = () => {
       <div className="flex shrink-0 items-center">
         <li className="hidden sm:block">
           <Link className="hover:bg-transparent" href={"/"}>
-            {/* <Image src={logo} alt="logo" height={24} /> */}
             <span className="text-2xl p-1 bg-gradient-to-t from-sky-900 to-sky-600 bg-clip-text text-transparent">
               TarkovProSettings
             </span>

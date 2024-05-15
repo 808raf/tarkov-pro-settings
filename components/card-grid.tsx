@@ -7,7 +7,6 @@ const CardGrid = () => {
       <h1 className="text-4xl font-bold mb-14">Players</h1>
       <div className="flex flex-col sm:flex-row">
         <PlayerSearch />
-        <h1>Combobox for gpu and cpu</h1>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-14 gap-4">
         <PlayerCard />
