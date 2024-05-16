@@ -5,7 +5,7 @@ import PlayerSection from "@/components/player-section";
 import Game from "@/components/settings/game";
 import Graphics from "@/components/settings/graphics";
 import PostFx from "@/components/settings/postfx";
-import SettingsCard from "@/components/settings/settings-card";
+import SettingsSection from "@/components/settings/settings-section";
 import Sound from "@/components/settings/sound";
 
 const Page = () => {
@@ -18,7 +18,7 @@ const Page = () => {
       <hr className="border-2 border-b-blue-950" />
       <PlayerSection />
       <hr className="border-2 border-b-blue-950" />
-      <SettingsCard />
+      <SettingsSection />
       <Game />
       <Graphics />
       <PostFx />

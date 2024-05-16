@@ -74,4 +74,25 @@
     @apply text-foreground dark:bg-slate-900;
     background-color: #f5f5f5;
   }
+  .grid__item {
+    position: relative;
+  }
+  .grid.settings {
+    --gap: 1em;
+    --line-offset: calc(var(--gap) / 2);
+    --line-thickness: 1px;
+  }
+  .grid__item::before,
+  .grid__item::after {
+    content: "";
+    position: absolute;
+    @apply bg-black dark:bg-white;
+    z-index: 1;
+  }
+  .grid__item::after {
+    inline-size: 100%;
+    block-size: var(--line-thickness);
+    inset-inline-start: 0;
+    inset-block-start: calc(var(--line-offset) * -1);
+  }
 }

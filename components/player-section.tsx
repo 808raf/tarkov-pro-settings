@@ -17,7 +17,7 @@ const PlayerSection = () => {
       <Card className="hover:dark:bg-slate-950 min-w-[300px] min-h-96 shadow-lg flex flex-col sm:flex-row items-center justify-center">
         <CardHeader>
           <PlayerAvatar />
-          <CardTitle className="self-center">Tigz</CardTitle>
+          <CardTitle className="self-center text-4xl">Tigz</CardTitle>
           <CardDescription className="self-center">
             Last Updated Date
           </CardDescription>
