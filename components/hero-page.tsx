@@ -1,6 +1,7 @@
 import Image from "next/image";
 import hero from "@/public/hero-solo.png";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const HeroPage = () => {
   return (
@@ -36,10 +37,14 @@ const HeroPage = () => {
                 </div>
                 {/* Buttons */}
                 <div className="mt-8 gap-3 flex justify-center">
-                  <Button size={"lg"}>Find Player</Button>
-                  <Button size={"lg"} variant={"outline"}>
-                    View Blog
-                  </Button>
+                  <Link href="/players">
+                    <Button size={"lg"}>Find Player</Button>
+                  </Link>
+                  <Link href="/blog">
+                    <Button size={"lg"} variant={"outline"}>
+                      View Blog
+                    </Button>
+                  </Link>
                 </div>
                 {/* End Buttons */}
               </div>

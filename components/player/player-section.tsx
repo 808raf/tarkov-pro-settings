@@ -14,7 +14,7 @@ import PlayerAvatar from "./player-avatar";
 const PlayerSection = () => {
   return (
     <section className="container mt-10 max-w-7xl mb-14">
-      <Card className="hover:dark:bg-slate-950 min-w-[300px] min-h-96 shadow-lg flex flex-col sm:flex-row items-center justify-center">
+      <Card className="hover:dark:bg-slate-950 min-w-[300px] min-h-96 shadow-lg flex flex-col sm:flex-row items-center justify-center hover:dark:text-sky-500 hover:text-sky-700">
         <CardHeader>
           <PlayerAvatar />
           <CardTitle className="self-center text-4xl">Tigz</CardTitle>

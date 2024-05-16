@@ -1,13 +1,4 @@
-import { Gamepad2 } from "lucide-react";
-
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import SettingsCard from "./settings-card";
 import { ReactNode } from "react";
 
