@@ -18,7 +18,6 @@ const CardGrid = () => {
         <PlayerCard />
         <PlayerCard />
       </div>
-      <h1>Pagination</h1>
     </section>
   );
 };
