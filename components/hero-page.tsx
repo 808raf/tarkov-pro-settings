@@ -10,9 +10,10 @@ const HeroPage = () => {
         <div className="min-w-[300px] flex">
           <Image
             className="hidden sm:block sm:p-3 sm:pb-0"
+            quality={100}
+            priority={true}
             src={hero}
             alt="tarkov hero"
-            priority={true}
           />
         </div>
       </div>

@@ -39,7 +39,10 @@ const PlayerSection: React.FC<PlayerSectionProps> = ({ players, params }) => {
         <CardHeader>
           {player ? (
             <>
-              <PlayerAvatar avatar={player.twitch_avatar} />
+              <PlayerAvatar
+                avatar={player.twitch_avatar}
+                alt={`${player.twitch_username} twitch icon`}
+              />
               <CardTitle className="self-center text-4xl">
                 {player.twitch_username}
               </CardTitle>

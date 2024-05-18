@@ -5,7 +5,7 @@ import Graphics from "../settings/graphics";
 import PostFx from "../settings/postfx";
 import Sound from "../settings/sound";
 import PlayerSection from "./player-section";
-import { supabase } from "@/lib/supabaseClient";
+import { getPlayers } from "@/lib/getPlayers";
 
 interface Params {
   params: {
@@ -13,29 +13,8 @@ interface Params {
   };
 }
 
-async function getPlayers() {
-  const { data, error } = await supabase.from("players").select("*");
-
-  if (error) {
-    throw new Error(error.message);
-  }
-
-  return data;
-}
-
-async function getPlayerGameSettings() {
-  const { data, error } = await supabase.from("settings").select("game");
-
-  if (error) {
-    throw new Error(error.message);
-  }
-
-  return data;
-}
-
 const PlayerPage = async ({ params }: Params) => {
   const players = await getPlayers();
-  const playerGameSettings = await getPlayerGameSettings();
 
   return (
     <main>
