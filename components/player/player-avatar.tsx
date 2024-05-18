@@ -1,6 +1,10 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-const PlayerAvatar = ({ avatar }) => {
+interface PlayerAvatarProps {
+  avatar: string;
+}
+
+const PlayerAvatar: React.FC<PlayerAvatarProps> = ({ avatar }) => {
   return (
     <Avatar className="flex self-center size-auto">
       <AvatarImage src={`${avatar}`} />

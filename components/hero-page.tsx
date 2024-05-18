@@ -38,7 +38,7 @@ const HeroPage = () => {
                 {/* Buttons */}
                 <div className="mt-8 gap-3 flex justify-center">
                   <Link href="/players">
-                    <Button size={"lg"}>Find Player</Button>
+                    <Button size={"lg"}>Find Players</Button>
                   </Link>
                   <Link href="/blog">
                     <Button size={"lg"} variant={"outline"}>

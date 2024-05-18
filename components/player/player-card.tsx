@@ -5,16 +5,29 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import PlayerAvatar from "./player-avatar";
+import Link from "next/link";
 
-const PlayerCard = ({ username, avatar, followers }) => {
+interface PlayerCardProps {
+  username: string;
+  avatar: string;
+  followers: string;
+}
+
+const PlayerCard: React.FC<PlayerCardProps> = ({
+  username,
+  avatar,
+  followers,
+}) => {
   return (
-    <Card className="flex flex-col shadow-lg h-64 w-full justify-center items-center hover:cursor-pointer hover:bg-card-back hover:dark:text-sky-500 hover:text-sky-600 hover:dark:bg-slate-800">
-      <CardHeader>
-        <PlayerAvatar avatar={avatar} />
-        <CardTitle className="self-center">{username}</CardTitle>
-        <CardDescription className="self-center">{followers}</CardDescription>
-      </CardHeader>
-    </Card>
+    <Link href={`/players/${username.toLowerCase()}`}>
+      <Card className="flex flex-col shadow-lg h-64 w-full justify-center items-center hover:cursor-pointer hover:bg-card-back hover:dark:text-sky-500 hover:text-sky-600 hover:dark:bg-slate-800">
+        <CardHeader>
+          <PlayerAvatar avatar={avatar} />
+          <CardTitle className="self-center">{username}</CardTitle>
+          <CardDescription className="self-center">{followers}</CardDescription>
+        </CardHeader>
+      </Card>
+    </Link>
   );
 };
 export default PlayerCard;

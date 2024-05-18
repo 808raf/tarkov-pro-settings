@@ -1,7 +1,5 @@
-import CardGrid from "@/components/player/card-grid";
 import HeroPage from "@/components/hero-page";
 import Navbar from "@/components/navbar";
-import PlayerSection from "@/components/player/player-section";
 import Game from "@/components/settings/game";
 import Graphics from "@/components/settings/graphics";
 import PostFx from "@/components/settings/postfx";
@@ -14,10 +12,8 @@ const Page = () => {
     <main>
       <Navbar />
       <HeroPage />
+
       <hr className="border-2 border-b-blue-950" />
-      <CardGrid />
-      <hr className="border-2 border-b-blue-950" />
-      <PlayerSection />
       <hr className="border-2 border-b-blue-950" />
       <Header title={"Settings"} />
       <Game title="Game" icon={<Gamepad2 size={48} color="#00a0f0" />} />
