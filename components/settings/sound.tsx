@@ -9,7 +9,7 @@ const Sound = ({ title, icon }: { title: string; icon: ReactNode }) => {
         <CardHeader>
           <CardTitle>
             <div className="flex items-center gap-3">
-              {icon}{" "}
+              {icon}
               <h4 className="text-3xl bg-gradient-to-t from-sky-400 to-sky-900 bg-clip-text text-transparent pb-1">
                 {title}
               </h4>
@@ -17,7 +17,18 @@ const Sound = ({ title, icon }: { title: string; icon: ReactNode }) => {
           </CardTitle>
         </CardHeader>
         <CardContent className="grid settings grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0 overflow-hidden">
-          <SettingsCard title="Setting 1" description="Description 1" />
+          <SettingsCard title="Overall Volume" description="Description 1" />
+          <SettingsCard title="Interface Volume" description="Description 1" />
+          <SettingsCard title="Chat Volume" description="Description 1" />
+          <SettingsCard title="Music Volume" description="Description 1" />
+          <SettingsCard title="Hideout Volume" description="Description 1" />
+          <SettingsCard title="Music on Raid End" description="Description 1" />
+          <SettingsCard title="Enable VOIP" description="Description 1" />
+          <SettingsCard title="VOIP Device" description="Description 1" />
+          <SettingsCard title="Microphone Volume" description="Description 1" />
+          <SettingsCard title="" description="" />
+          <SettingsCard title="" description="" />
+          <SettingsCard title="" description="" />
         </CardContent>
       </Card>
     </section>

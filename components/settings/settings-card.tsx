@@ -8,7 +8,7 @@ const SettingsCard = ({
   return (
     <div className="flex flex-col grid__item p-4 mb-4">
       <h6 className="font-bold">{title}</h6>
-      <p className="text-sm text-muted-foreground">{description}</p>
+      <p className="text-md text-muted-foreground">{description}</p>
     </div>
   );
 };
