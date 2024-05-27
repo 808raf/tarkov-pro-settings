@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import SettingsCard from "@/components/settings/settings-card";
+import EquipmentCard from "@/components/equipment/equipment-card";
 import { ReactNode } from "react";
 
 const Equipment = ({ title, icon }: { title: string; icon: ReactNode }) => {
@@ -17,12 +17,18 @@ const Equipment = ({ title, icon }: { title: string; icon: ReactNode }) => {
           </CardTitle>
         </CardHeader>
         <CardContent className="grid settings grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0 overflow-hidden">
-          <SettingsCard title="Graphics Card" description="Description 1" />
-          <SettingsCard title="CPU" description="Description 1" />
-          <SettingsCard title="Mouse" description="Description 1" />
-          <SettingsCard title="Keyboard" description="Description 1" />
-          <SettingsCard title="Headset" description="Description 1" />
-          <SettingsCard title="Mic" description="Description 1" />
+          <EquipmentCard
+            title="Graphics Card"
+            description="Description 1"
+            img=""
+          />
+          <EquipmentCard title="CPU" description="Description 1" img="" />
+          <EquipmentCard title="Mouse" description="Description 1" img="" />
+          <EquipmentCard title="Keyboard" description="Description 1" img="" />
+          <EquipmentCard title="Headset" description="Description 1" img="" />
+          <EquipmentCard title="Mic" description="Description 1" img="" />
+          <EquipmentCard title="" description="" img="" />
+          <EquipmentCard title="" description="" img="" />
         </CardContent>
       </Card>
     </section>
