@@ -29,9 +29,7 @@ interface PlayerSectionProps {
 }
 
 const PlayerSection: React.FC<PlayerSectionProps> = ({ players, params }) => {
-  const player = players.find(
-    (player) => params.id === player.twitch_username.toLowerCase()
-  );
+  const player = players.find((player) => params.id === player.twitch_username);
 
   return (
     <section className="container mt-10 max-w-7xl mb-14">

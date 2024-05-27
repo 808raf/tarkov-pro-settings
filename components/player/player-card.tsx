@@ -19,7 +19,7 @@ const PlayerCard: React.FC<PlayerCardProps> = ({
   followers,
 }) => {
   return (
-    <Link href={`/players/${username.toLowerCase()}`}>
+    <Link href={`/players/${username}`}>
       <Card className="flex flex-col shadow-lg h-64 w-full justify-center items-center hover:cursor-pointer hover:bg-card-back hover:dark:text-sky-500 hover:text-sky-600 hover:dark:bg-slate-800">
         <CardHeader>
           <PlayerAvatar avatar={avatar} alt={`${username} twitch icon`} />
