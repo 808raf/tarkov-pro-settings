@@ -27,7 +27,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/pages/api/players.js",
-    "lib/supabaseClient.js"
+    "lib/supabaseClient.js",
+    "lib/getPlayers.js"
   ],
   "exclude": ["node_modules"]
 }
