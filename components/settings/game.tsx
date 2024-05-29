@@ -2,7 +2,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import SettingsCard from "./settings-card";
 import { ReactNode } from "react";
 
-const Game = ({ title, icon }: { title: string; icon: ReactNode }) => {
+interface GameProps {
+  title: string;
+  icon: ReactNode;
+  gameSettings: {
+    [key: string]: string | number | boolean;
+  };
+}
+
+const Game = ({ title, icon, gameSettings }: GameProps) => {
   return (
     <section className="container mt-10 max-w-7xl mb-14">
       <Card className="shadow-lg">
@@ -19,57 +27,75 @@ const Game = ({ title, icon }: { title: string; icon: ReactNode }) => {
         <CardContent className="grid settings grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0 overflow-hidden">
           <SettingsCard
             title="Interface Language"
-            description="Description 1"
+            description={`${gameSettings.Language}`}
           />
           <SettingsCard
             title="Main Menu Background"
-            description="Description 1"
+            description={`${gameSettings.EnvironmentUiType}`}
           />
-          <SettingsCard title="Quick Slots" description="Description 1" />
+          <SettingsCard
+            title="Quick Slots"
+            description={`${gameSettings.QuickSlotsVisibility}`}
+          />
           <SettingsCard
             title="Stamina and Stance"
-            description="Description 1"
+            description={`${gameSettings.StaminaVisibility}`}
           />
-          <SettingsCard title="Health Condition" description="Description 1" />
+          <SettingsCard
+            title="Health Condition"
+            description={`${gameSettings.HealthColor}`}
+          />
           <SettingsCard
             title="Health Color Scheme"
-            description="Description 1"
+            description={`${gameSettings.HealthVisibility}`}
           />
           <SettingsCard
             title="Highlight Available Operations"
-            description="Description 1"
+            description={`${gameSettings.HighlightScope}`}
           />
           <SettingsCard
             title="Double Click Item Quick Use"
-            description="Description 1"
+            description={`${gameSettings.ItemQuickUseMode}`}
           />
           <SettingsCard
             title="Vaulting Over Medium Obstacles"
-            description="Description 1"
+            description={`${gameSettings.AutoVaultingMode}`}
           />
           <SettingsCard
             title="Automatic Ram Cleaner"
-            description="Description 1"
+            description={`${gameSettings.AutoEmptyWorkingSet}`}
           />
           <SettingsCard
             title="Only Use Physical Cores"
-            description="Description 1"
+            description={`${gameSettings.SetAffinityToLogicalCores}`}
           />
-          <SettingsCard title="FOV" description="Description 1" />
-          <SettingsCard title="Head Bobbing" description="Description 1" />
+          <SettingsCard
+            title="FOV"
+            description={`${gameSettings.FieldOfView}`}
+          />
+          <SettingsCard
+            title="Head Bobbing"
+            description={`${gameSettings.HeadBobbing}`}
+          />
           <SettingsCard
             title="Malfunction Notifications"
-            description="Description 1"
+            description={`${gameSettings.MalfunctionVisability}`}
           />
-          <SettingsCard title="Preload Hideout" description="Description 1" />
+          <SettingsCard
+            title="Preload Hideout"
+            description={`${gameSettings.EnableHideoutPreload}`}
+          />
           <SettingsCard
             title="Block Group Invites"
-            description="Description 1"
+            description={`${gameSettings.BlockGroupInvites}`}
           />
-          <SettingsCard title="Streamer Mode" description="Description 1" />
+          <SettingsCard
+            title="Streamer Mode"
+            description={`${gameSettings.StreamerModeEnabled}`}
+          />
           <SettingsCard
             title="Trading Intermediate Screen"
-            description="Description 1"
+            description={`${gameSettings.TradingIntermediateScreen}`}
           />
           <SettingsCard title="" description="" />
           <SettingsCard title="" description="" />

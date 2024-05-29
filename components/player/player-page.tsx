@@ -11,10 +11,11 @@ import Graphics from "../settings/graphics";
 import PostFx from "../settings/postfx";
 import Sound from "../settings/sound";
 import PlayerSection from "./player-section";
-import { getPlayers } from "@/lib/getPlayers";
+import getPlayers from "@/lib/getPlayers";
 import Equipment from "../equipment/player-equipment";
 import Mouse from "../settings/mouse";
 import { Mouse as MouseIcon } from "lucide-react";
+import getGameSettings from "@/lib/getGameSettings";
 
 interface Params {
   params: {
@@ -24,13 +25,19 @@ interface Params {
 
 const PlayerPage = async ({ params }: Params) => {
   const players = await getPlayers();
+  const username = params.id;
+  const gameSettings = await getGameSettings(username);
 
   return (
     <main>
       <PlayerSection players={players} params={params} />
       <Header title={"Settings"} />
       <Mouse title={"Mouse"} icon={<MouseIcon size={48} color="#00a0f0" />} />
-      <Game title="Game" icon={<Gamepad2 size={48} color="#00a0f0" />} />
+      <Game
+        title="Game"
+        icon={<Gamepad2 size={48} color="#00a0f0" />}
+        gameSettings={gameSettings}
+      />
       <Graphics title="Graphics" icon={<Monitor size={48} color="#00a0f0" />} />
       <PostFx
         title="PostFx"
