@@ -16,6 +16,7 @@ import Equipment from "../equipment/player-equipment";
 import Mouse from "../settings/mouse";
 import { Mouse as MouseIcon } from "lucide-react";
 import getGameSettings from "@/lib/getGameSettings";
+import getGraphicsSettings from "@/lib/getGraphicsSettings";
 import convertGameSettings from "@/lib/convertGameSettings";
 
 interface Params {
@@ -28,6 +29,7 @@ const PlayerPage = async ({ params }: Params) => {
   const players = await getPlayers();
   const username = params.id;
   const gameSettings = await getGameSettings(username);
+  const graphicsSettings = await getGraphicsSettings(username);
   const convertedGameSettings = convertGameSettings(gameSettings);
 
   return (
@@ -40,7 +42,11 @@ const PlayerPage = async ({ params }: Params) => {
         icon={<Gamepad2 size={48} color="#00a0f0" />}
         gameSettings={convertedGameSettings}
       />
-      <Graphics title="Graphics" icon={<Monitor size={48} color="#00a0f0" />} />
+      <Graphics
+        title="Graphics"
+        icon={<Monitor size={48} color="#00a0f0" />}
+        graphicsSettings={graphicsSettings}
+      />
       <PostFx
         title="PostFx"
         icon={<SlidersHorizontal size={48} color="#00a0f0" />}

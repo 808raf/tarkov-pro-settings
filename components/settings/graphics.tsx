@@ -2,7 +2,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import SettingsCard from "./settings-card";
 import { ReactNode } from "react";
 
-const Graphics = ({ title, icon }: { title: string; icon: ReactNode }) => {
+interface GraphicsProps {
+  title: string;
+  icon: ReactNode;
+  graphicsSettings: {
+    [key: string]: string | number | boolean;
+  };
+}
+
+const Graphics = ({ title, icon, graphicsSettings }: GraphicsProps) => {
   return (
     <section className="container mt-10 max-w-7xl mb-14">
       <Card className="shadow-lg">
@@ -17,32 +25,80 @@ const Graphics = ({ title, icon }: { title: string; icon: ReactNode }) => {
           </CardTitle>
         </CardHeader>
         <CardContent className="grid settings grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0 overflow-hidden">
-          <SettingsCard title="Screen Resolution" description="Description" />
-          <SettingsCard title="Screen Mode" description="Description" />
-          <SettingsCard title="Aspect Ratio" description="Description" />
-          <SettingsCard title="Monitor" description="Description" />
-          <SettingsCard title="Texture Quality" description="Description" />
-          <SettingsCard title="Shadows Quality" description="Description" />
-          <SettingsCard title="Object LOD Quality" description="Description" />
-          <SettingsCard title="Overall Visibility" description="Description" />
-          <SettingsCard title="Anti-aliasing" description="Description" />
-          <SettingsCard title="Resampling" description="Description" />
-          <SettingsCard title="NVIDIA DLSS" description="Description" />
-          <SettingsCard title="AMD FSR 1.0" description="Description" />
-          <SettingsCard title="AMD FSR 2.2" description="Description" />
-          <SettingsCard title="HBAO" description="Description" />
-          <SettingsCard title="SSR" description="Description" />
+          <SettingsCard
+            title="Screen Resolution"
+            description={`${graphicsSettings.SSR}`}
+          />
+          <SettingsCard
+            title="Screen Mode"
+            description={`${graphicsSettings.SSR}`}
+          />
+          <SettingsCard
+            title="Aspect Ratio"
+            description={`${graphicsSettings.SSR}`}
+          />
+          <SettingsCard
+            title="Monitor"
+            description={`${graphicsSettings.SSR}`}
+          />
+          <SettingsCard
+            title="Texture Quality"
+            description={`${graphicsSettings.TextureQuality}`}
+          />
+          <SettingsCard
+            title="Shadows Quality"
+            description={`${graphicsSettings.ShadowsQuality}`}
+          />
+          <SettingsCard
+            title="Object LOD Quality"
+            description={`${graphicsSettings.LodBias}`}
+          />
+          <SettingsCard
+            title="Overall Visibility"
+            description={`${graphicsSettings.OverallVisibility}`}
+          />
+          <SettingsCard
+            title="Anti-aliasing"
+            description={`${graphicsSettings.AntiAliasing}`}
+          />
+          <SettingsCard
+            title="Resampling"
+            description={`${graphicsSettings.SuperSampling}`}
+          />
+          <SettingsCard
+            title="NVIDIA DLSS"
+            description={`${graphicsSettings.DLSSMode}`}
+          />
+          <SettingsCard
+            title="AMD FSR 1.0"
+            description={`${graphicsSettings.FSRMode}`}
+          />
+          <SettingsCard
+            title="AMD FSR 2.2"
+            description={`${graphicsSettings.FSR2Mode}`}
+          />
+          <SettingsCard title="HBAO" description={`${graphicsSettings.SSR}`} />
+          <SettingsCard title="SSR" description={`${graphicsSettings.SSR}`} />
           <SettingsCard
             title="Anisotropic Filtering"
-            description="Description"
+            description={`${graphicsSettings.AnisotropicFiltering}`}
           />
           <SettingsCard
             title="NVIDIA Reflex Low Latency"
-            description="Description"
+            description={`${graphicsSettings.NVidiaReflex}`}
           />
-          <SettingsCard title="Sharpness" description="Description" />
-          <SettingsCard title="Lobby FPS Limit" description="Description" />
-          <SettingsCard title="Game FPS Limit" description="Description" />
+          <SettingsCard
+            title="Sharpness"
+            description={`${graphicsSettings.Sharpen}`}
+          />
+          <SettingsCard
+            title="Lobby FPS Limit"
+            description={`${graphicsSettings.LobbyFramerate}`}
+          />
+          <SettingsCard
+            title="Game FPS Limit"
+            description={`${graphicsSettings.GameFramerate}`}
+          />
         </CardContent>
       </Card>
     </section>
