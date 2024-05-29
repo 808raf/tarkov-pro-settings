@@ -7,12 +7,12 @@ import Sound from "@/components/settings/sound";
 import { Gamepad2, Monitor, SlidersHorizontal, Volume2 } from "lucide-react";
 import Header from "@/components/header";
 import getGameSettings from "@/lib/getGameSettings";
+import convertGameSettings from "@/lib/convertGameSettings";
 
 const Page = async () => {
   const username = "Tigz";
   const gameSettings = await getGameSettings(username);
-  console.log(gameSettings);
-
+  const convertedGameSettings = convertGameSettings(gameSettings);
   return (
     <main>
       <Navbar />
@@ -24,7 +24,7 @@ const Page = async () => {
       <Game
         title="Game"
         icon={<Gamepad2 size={48} color="#00a0f0" />}
-        gameSettings={gameSettings}
+        gameSettings={convertedGameSettings}
       />
       <Graphics title="Graphics" icon={<Monitor size={48} color="#00a0f0" />} />
       <PostFx

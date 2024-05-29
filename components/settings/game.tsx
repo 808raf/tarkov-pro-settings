@@ -43,11 +43,11 @@ const Game = ({ title, icon, gameSettings }: GameProps) => {
           />
           <SettingsCard
             title="Health Condition"
-            description={`${gameSettings.HealthColor}`}
+            description={`${gameSettings.HealthVisibility}`}
           />
           <SettingsCard
             title="Health Color Scheme"
-            description={`${gameSettings.HealthVisibility}`}
+            description={`${gameSettings.HealthColor}`}
           />
           <SettingsCard
             title="Highlight Available Operations"
