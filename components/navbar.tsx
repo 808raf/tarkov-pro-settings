@@ -20,15 +20,17 @@ const Navbar = () => {
           >
             Players
           </Link>
-          <Link
+          {/* Removed blog link, as thats a planned feature */}
+          {/* <Link
             className="hover:bg-sky-500 hover:text-white p-3 rounded-sm block"
             href="/blog"
           >
             Blog
-          </Link>
+          </Link> */}
         </li>
         <li className="flex items-center space-x-3">
-          <Link
+          {/* Removed log in and sign up, as thats a planned feature */}
+          {/* <Link
             href="/login"
             className="hover:bg-transparent hover:text-black p-0"
           >
@@ -46,7 +48,7 @@ const Navbar = () => {
             >
               Sign Up
             </Button>
-          </Link>
+          </Link> */}
           <DarkToggle />
         </li>
       </ul>

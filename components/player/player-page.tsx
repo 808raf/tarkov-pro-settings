@@ -47,11 +47,12 @@ const PlayerPage = async ({ params }: Params) => {
         icon={<Monitor size={48} color="#00a0f0" />}
         graphicsSettings={graphicsSettings}
       />
-      <PostFx
+      {/* Removed sound and postfx for now as its of little importance */}
+      {/* <PostFx
         title="PostFx"
         icon={<SlidersHorizontal size={48} color="#00a0f0" />}
       />
-      <Sound title="Sound" icon={<Volume2 size={48} color="#00a0f0" />} />
+      <Sound title="Sound" icon={<Volume2 size={48} color="#00a0f0" />} /> */}
       <Header title={"Equipment"} />
       <Equipment title={"Gear"} icon={<PcCase size={48} color="#00a0f0" />} />
     </main>

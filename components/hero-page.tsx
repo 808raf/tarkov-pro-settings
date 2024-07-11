@@ -2,10 +2,12 @@ import Image from "next/image";
 import hero from "@/public/hero-solo.png";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { IoMdArrowDropdownCircle } from "react-icons/io";
+import HeroSection from "./hero-section";
 
 const HeroPage = () => {
   return (
-    <div className="flex flex-col h-5/6 md:flex-row items-center justify-center">
+    <div className="flex flex-col md:flex-row items-center justify-center shadow-sm w-full h-screen">
       <div className="md:w-1/2">
         <div className="min-w-[300px] flex">
           <Image
@@ -39,11 +41,15 @@ const HeroPage = () => {
                 {/* Buttons */}
                 <div className="mt-8 gap-3 flex justify-center">
                   <Link href="/players">
-                    <Button size={"lg"}>Find Players</Button>
+                    <Button size={"lg"}>Find players</Button>
                   </Link>
-                  <Link href="/blog">
-                    <Button size={"lg"} variant={"outline"}>
-                      View Blog
+                  <Link href="#about">
+                    <Button
+                      size={"lg"}
+                      variant={"outline"}
+                      className="flex gap-1"
+                    >
+                      See how it works <IoMdArrowDropdownCircle />
                     </Button>
                   </Link>
                 </div>
